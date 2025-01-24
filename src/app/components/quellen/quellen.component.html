@@ -1,0 +1,8 @@
+<div class="tile">
+    <h2>Quelle</h2>
+    <div class="source-flexbox">
+        @for (quelle of results.quellen(); track quelle.id) {
+            <app-source [source]="quelle" [selected]="quelle === results.selectedQuelle()" />
+        }
+    </div>  
+</div>

@@ -1,1 +1,99 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import '../node_modules/normalize.css/normalize.css';
+
+:root {
+    --border-radius-small: 0.75em;
+    --bar-height: 2em;
+    --monospace-font: 25%;
+
+    // Colors
+    --black: #232323;
+    --main-bg: #f0f0f0;
+    --tile-bg: #fafafa;
+    --font-color: #272727;
+}
+body {
+    font-family: "Outfit", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1em;
+
+    background-color: var(--main-bg);
+    color: var(--font-color);
+}
+
+p, h1, h2, h3 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.section {
+    padding: 4em 5vw;
+}
+
+.section.header {
+    padding-top: 2em;
+    padding-bottom: 0em;
+    margin-top: 0em;
+    margin-bottom: -1em;
+
+}
+
+.section.footer {
+    color: var(--tile-bg);
+    background-color: var(--black);
+}
+
+.container {
+    max-width: 1050px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: var(--monospace-font);
+    margin-top: 0;
+    margin-bottom: 1.5em;
+}
+
+h2.white {
+    color: #F2F2F2;
+}
+
+h3 {
+    margin: 0em;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+p {
+    line-height: 1.6;
+}
+
+a {
+    color: var(--font-color);
+}
+
+.tile {
+    background-color: var(--tile-bg);
+    padding: 2.25em;
+    border-radius: 1.5em;;
+    transition: all 1s;
+    box-shadow: 0 0 1em 0 rgba(35, 35, 35, 0.05);
+}
+
+.tile.black {
+    background-color: var(--black);
+    color: var(--tile-bg);
+}

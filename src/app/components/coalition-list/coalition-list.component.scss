@@ -1,0 +1,22 @@
+.coalition-item {
+    margin-top: 1.25em;
+}
+
+.value {
+    font-weight: 300;
+    margin-top: 0.5em;
+}
+
+.bar-outer {
+    height: var(--bar-height);
+    background-color: #E8E8E8;
+    border-radius: var(--border-radius-small);
+    margin-top: 0.75em;
+    display: flex;
+    overflow: clip;
+}
+
+.bar-inner {
+    height: 100%;
+    transition: width 0.5s ease-in-out;
+}

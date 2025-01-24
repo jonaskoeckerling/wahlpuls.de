@@ -1,0 +1,30 @@
+.bar-item {
+    display: flex;
+    flex-direction: horizontal;
+    margin: 1.5em 0em 1.5em 0em;
+    align-items: center;
+    gap: 1em;
+}
+
+.label {
+    width: 4.75em;
+    flex-shrink: 0;
+}
+
+.bar-outer {
+    height: var(--bar-height);
+    position: relative;
+    flex-grow: 1;
+}
+
+.bar-inner {
+    border-radius: 0 var(--border-radius-small) var(--border-radius-small) 0;
+    height: 100%;
+    transition: width 0.5s ease-in-out;
+}
+
+.value {
+    width: 3em;
+    font-weight: 300;
+    flex-shrink: 0;
+}

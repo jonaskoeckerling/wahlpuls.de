@@ -1,0 +1,33 @@
+.grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1.5em;
+}
+
+@media screen and (max-width:930px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.grid-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.footer-copyright {
+    display: flex;
+    flex-direction: column;
+    gap: 0.875em;
+    color: var(--tile-bg);
+    font-weight: 400;
+    font-size: 0.875em;
+    text-transform: uppercase;
+    letter-spacing: var(--monospace-font);
+}
+
+a {
+    color: #E8E8E8;
+}

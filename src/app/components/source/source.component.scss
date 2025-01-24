@@ -1,0 +1,32 @@
+button {
+    border-radius: var(--border-radius-small);
+    padding: 1em;
+    color: #272727;
+    font-weight: 300;
+    background-color: transparent;
+    border: 0;
+    text-align: left;
+    width: 100%;
+    transition: background-color 0.2s;
+    transition: transform 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: #F6F5F5;
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+.selected {
+    font-weight: 500;
+    background-color: #F6F5F5;
+}
+
+.quelle-datum {
+    margin-top: 0.4em;
+    font-size: 0.75em;
+    font-weight: 200;
+}

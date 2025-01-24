@@ -1,0 +1,23 @@
+<div class="tile">
+   <h2>Mögliche Koalitionen</h2>
+    @for (coalition of this.results.coalitions(); track coalition.id) {
+        <div class="coalition-item">
+            <h3 class="label">
+                @for (value of coalition.values; track $index) {
+                    {{ value.party }}
+                    @if ($index < coalition.values.length - 1) {
+                    &nbsp;+&nbsp; 
+                    }
+                }
+            </h3>
+            <div class="value">
+                {{ coalition.seats }} von 315 benötigten Sitzen
+            </div>
+            <div class="bar-outer">
+                @for (value of coalition.values; track $index) {
+                    <div class="bar-inner" style="background-color: {{ results.getPartyColor(value.party) }}; width: {{(value.value / 630) * 100 }}%;"></div>
+                }
+            </div>
+        </div>
+    }
+</div>
