@@ -78,7 +78,7 @@ export class ResultsService {
   async loadPollResults() {
     const supbaseClient = createClient(environment.supabase_url, environment.supabase_api_key);
 
-    const { data, error } = await supbaseClient.from('pollresults').select('*');
+    const { data, error } = await supbaseClient.from('pollresults').select('*').order('date', { ascending: false })
     
     if (error) throw error;
 
