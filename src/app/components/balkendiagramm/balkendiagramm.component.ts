@@ -10,7 +10,7 @@ import { BarComponent } from '../bar/bar.component';
 })
 export class BalkendiagrammComponent {
   results = inject(ResultsService);
-  selectedQuelle = this.results.selectedQuelle;
+  selectedQuelle = this.results.selectedPollResult;
 
   // Get max value for rendering full width chart
   maxValue = signal<number>(0);

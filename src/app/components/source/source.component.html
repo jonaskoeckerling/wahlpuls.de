@@ -1,4 +1,4 @@
 <button [class]="this.selected() ? 'selected' : ''" (click)="handleClick()" [disabled]="false">
-    <div class="quelle-titel">{{ source().name }}</div>
-    <div class="quelle-datum">{{ source().datum | date : 'dd.MM.yyyy' }}</div>
+    {{ pollResult().source }}
+    <div class="source-date">{{ pollResult().date | date : 'dd.MM.yyyy' }}</div>
 </button>

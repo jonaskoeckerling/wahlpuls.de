@@ -1,7 +1,7 @@
-import { Component, effect, inject, input } from '@angular/core';
-import { Quelle } from '../../models/quellen.model';
+import { Component, inject, input } from '@angular/core';
 import { ResultsService } from '../../services/results.service';
 import { DatePipe } from '@angular/common';
+import { pollResult } from '../../models/pollresult.model';
 
 @Component({
   selector: 'app-source',
@@ -10,11 +10,11 @@ import { DatePipe } from '@angular/common';
   styleUrl: './source.component.scss'
 })
 export class SourceComponent {
-  source = input.required<Quelle>();
+  pollResult = input.required<pollResult>();
   selected = input.required<Boolean>();
 
   results = inject(ResultsService);
   handleClick(): void {
-    this.results.setSelectedQuelle(this.source().id);
+    this.results.setSelectedPollResult(this.pollResult().id);
   }
 }

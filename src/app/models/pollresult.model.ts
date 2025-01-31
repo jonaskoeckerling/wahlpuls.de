@@ -1,7 +1,7 @@
-export interface Quelle {
-    id: number
-    name: string;
-    datum: Date;
+export interface pollResult {
+    id: number;
+    source: string;
+    date: Date;
     cducsu: number;
     spd: number;
     gruene: number;
