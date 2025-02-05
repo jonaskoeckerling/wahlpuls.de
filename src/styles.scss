@@ -1,6 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 @import '../node_modules/normalize.css/normalize.css';
+
+
+/* variables */
 
 :root {
     --border-radius-small: 0.75em;
@@ -13,43 +15,42 @@
     --tile-bg: #fafafa;
     --font-color: #272727;
 }
+
+
+/* font and background */
+
 body {
     font-family: "Outfit", serif;
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
-    font-size: 1em;
+    font-size: 16px;
+    color: var(--font-color);
 
     background-color: var(--main-bg);
-    color: var(--font-color);
 }
+
+
+/* responsive */
+
+@media screen and (max-width:767px) {
+    body {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:497px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+
+/* headlines, paragraphs, links */
 
 p, h1, h2, h3 {
     margin-block-start: 0;
     margin-block-end: 0;
-}
-
-.section {
-    padding: 4em 5vw;
-}
-
-.section.header {
-    padding-top: 2em;
-    padding-bottom: 0em;
-    margin-top: 0em;
-    margin-bottom: -1em;
-
-}
-
-.section.footer {
-    color: var(--tile-bg);
-    background-color: var(--black);
-}
-
-.container {
-    max-width: 1050px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 h1 {
@@ -84,6 +85,35 @@ p {
 a {
     color: var(--font-color);
 }
+
+
+/* sections and containers */
+
+.section {
+    padding: 4em 5vw;
+}
+
+.section.header {
+    padding-top: 2em;
+    padding-bottom: 0em;
+    margin-top: 0em;
+    margin-bottom: -1em;
+
+}
+
+.section.footer {
+    color: var(--tile-bg);
+    background-color: var(--black);
+}
+
+.container {
+    max-width: 1050px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* dashboard tiles */
 
 .tile {
     background-color: var(--tile-bg);
