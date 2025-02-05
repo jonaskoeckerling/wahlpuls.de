@@ -1,13 +1,13 @@
 .bar-item {
     display: flex;
     flex-direction: horizontal;
-    margin: 1.5em 0em 1.5em 0em;
+    margin: 1.25em 0em 0em 0em;
     align-items: center;
     gap: 1em;
 }
 
 .label {
-    width: 4.75em;
+    width: 4.5em;
     flex-shrink: 0;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .value {
-    width: 3em;
+    width: 2.9em;
     font-weight: 300;
     flex-shrink: 0;
 }

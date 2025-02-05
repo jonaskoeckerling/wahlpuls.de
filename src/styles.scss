@@ -65,7 +65,7 @@ h2 {
     text-transform: uppercase;
     letter-spacing: var(--monospace-font);
     margin-top: 0;
-    margin-bottom: 1.5em;
+    margin-bottom: 1.75em;
 }
 
 h2.white {
@@ -117,7 +117,7 @@ a {
 
 .tile {
     background-color: var(--tile-bg);
-    padding: 2.25em;
+    padding: 2em;
     border-radius: 1.5em;;
     transition: all 1s;
     box-shadow: 0 0 1em 0 rgba(35, 35, 35, 0.05);
