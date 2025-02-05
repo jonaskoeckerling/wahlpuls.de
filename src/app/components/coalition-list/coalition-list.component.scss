@@ -1,17 +1,17 @@
 .coalition-item {
-    margin-top: 1.25em;
+    margin-top: 1.75em;
 }
 
 .value {
     font-weight: 300;
-    margin-top: 0.5em;
+    margin-top: 0.25em;
 }
 
 .bar-outer {
     height: var(--bar-height);
     background-color: #E8E8E8;
     border-radius: var(--border-radius-small);
-    margin-top: 0.75em;
+    margin-top: 0.5em;
     display: flex;
     overflow: clip;
 }

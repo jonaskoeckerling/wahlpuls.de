@@ -1,6 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 @import '../node_modules/normalize.css/normalize.css';
+
+
+/* variables */
 
 :root {
     --border-radius-small: 0.75em;
@@ -13,21 +15,79 @@
     --tile-bg: #fafafa;
     --font-color: #272727;
 }
+
+
+/* font and background */
+
 body {
     font-family: "Outfit", serif;
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
-    font-size: 1em;
+    font-size: 16px;
+    color: var(--font-color);
 
     background-color: var(--main-bg);
-    color: var(--font-color);
 }
+
+
+/* responsive */
+
+@media screen and (max-width:767px) {
+    body {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:497px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+
+/* headlines, paragraphs, links */
 
 p, h1, h2, h3 {
     margin-block-start: 0;
     margin-block-end: 0;
 }
+
+h1 {
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: var(--monospace-font);
+    margin-top: 0;
+    margin-bottom: 1.75em;
+}
+
+h2.white {
+    color: #F2F2F2;
+}
+
+h3 {
+    margin: 0em;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+p {
+    line-height: 1.6;
+}
+
+a {
+    color: var(--font-color);
+}
+
+
+/* sections and containers */
 
 .section {
     padding: 4em 5vw;
@@ -52,42 +112,12 @@ p, h1, h2, h3 {
     margin-right: auto;
 }
 
-h1 {
-    font-weight: 600;
-    margin-top: 0;
-    margin-bottom: 0.5em;
-}
 
-h2 {
-    font-weight: 400;
-    font-size: 1em;
-    text-transform: uppercase;
-    letter-spacing: var(--monospace-font);
-    margin-top: 0;
-    margin-bottom: 1.5em;
-}
-
-h2.white {
-    color: #F2F2F2;
-}
-
-h3 {
-    margin: 0em;
-    font-size: 1.5em;
-    font-weight: 600;
-}
-
-p {
-    line-height: 1.6;
-}
-
-a {
-    color: var(--font-color);
-}
+/* dashboard tiles */
 
 .tile {
     background-color: var(--tile-bg);
-    padding: 2.25em;
+    padding: 2em;
     border-radius: 1.5em;;
     transition: all 1s;
     box-shadow: 0 0 1em 0 rgba(35, 35, 35, 0.05);
