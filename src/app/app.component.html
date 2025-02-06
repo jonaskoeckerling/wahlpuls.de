@@ -1,37 +1,41 @@
-<div class="section header">
-  <div class="container">
-      <h1>Bundestageswahl 2025</h1>
-      <p>Aktuelle Umfragewerte der Parteien aus verschiedenen Wahlumfragen.</p>
-  </div>
-</div>
-<div class="section">
-  <div class="container">
-    <div class="grid">
-      <div class="grid-column">
-        <app-balkendiagramm />
-        <app-coalition-list />
-      </div>
-      <div class="grid-column">
-        <app-quellen />
-        <app-countdown />
-      </div> 
+@if (this.results.isDataAvailable()) {
+<div [@fadeAnimation]>
+  <div class="section header">
+    <div class="container">
+        <h1>Bundestageswahl 2025</h1>
+        <p>Aktuelle Umfragewerte der Parteien aus verschiedenen Wahlumfragen.</p>
     </div>
   </div>
-</div>
-<div class="section footer">
-  <div class="container">
-    <h1>Wahlpuls.de</h1>
-    <div class="grid">
-      <div class="grid-column">
-        <p> In unserem Dashboard findest Du aktuelle Wahlumfragen zur Bundestagswahl 2025. Mit regelmäßig aktualisierten Daten von renommierten Umfrageinstituten geben wir dir einen kompakten Überblick über die Umfragewerte in der politischen Landschaft. Hier findest du verlässliche Informationen zu Wahlprognosen und Wählerpräferenzen.</p>
-        <div>
-          <a href="#">Impressum</a> | <a href="#">Datenschutz</a>
+  <div class="section">
+    <div class="container">
+      <div class="grid">
+        <div class="grid-column">
+          <app-balkendiagramm />
+          <app-coalition-list />
+        </div>
+        <div class="grid-column">
+          <app-quellen />
+          <app-countdown />
+        </div> 
+      </div>
+    </div>
+  </div>
+  <div class="section footer">
+    <div class="container">
+      <h1>Wahlpuls.de</h1>
+      <div class="grid">
+        <div class="grid-column">
+          <p> In unserem Dashboard findest Du aktuelle Wahlumfragen zur Bundestagswahl 2025. Mit regelmäßig aktualisierten Daten von renommierten Umfrageinstituten geben wir dir einen kompakten Überblick über die Umfragewerte in der politischen Landschaft. Hier findest du verlässliche Informationen zu Wahlprognosen und Wählerpräferenzen.</p>
+          <div>
+            <a href="#">Impressum</a> | <a href="#">Datenschutz</a>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <p>🤝 Non-Profit-Projekt </p>
+          <p>Gebaut mit 🫶 in OWL </p>
         </div>
       </div>
-      <div class="footer-copyright">
-        <p>🤝 Non-Profit-Projekt </p>
-        <p>Gebaut mit 🫶 in OWL </p>
-      </div>
     </div>
   </div>
 </div>
+}

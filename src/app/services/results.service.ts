@@ -74,6 +74,9 @@ export class ResultsService {
     return coalitions;
   });
 
+  // Signal for loading state
+  isDataAvailable: Signal<boolean> = computed(() => this.allPollResults().length > 0);
+
   // Load poll results from the database
   async loadPollResults() {
     const supbaseClient = createClient(environment.supabase_url, environment.supabase_api_key);
