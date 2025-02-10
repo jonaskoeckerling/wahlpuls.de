@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, computed, input } from '@angular/core';
 
 @Component({
   selector: 'app-bar',
@@ -11,4 +11,6 @@ export class BarComponent {
   value = input<number>(0);
   barValue = input<number>(0); // Maximum of all bars should be 100%
   color = input<string>('');
+
+  isDisabled = computed(() => this.name() === "Sonstige" || this.value() < 5);
 }
