@@ -54,21 +54,31 @@ export class ResultsService {
     const bswSeats = this.selectedPollResult().bsw >= 5 ? Math.round((this.selectedPollResult().bsw / totalPercentage) * 630) : 0;
 
     let coalitions: Array<Coalition> = new Array();
-
+    
+    // Nur CDU
     if(cduSeats > 315) {
       coalitions.push({id: "cdu", seats: cduSeats, values: [{party: "CDU/CSU", value: cduSeats}]});
     }
-    if(cduSeats + afdSeats > 315) {
-      coalitions.push({id: "cduafd", seats: cduSeats + afdSeats, values: [{party: "CDU/CSU", value: cduSeats}, {party: "AfD", value: afdSeats}]});
-    }
+
+    // CDU + SPD
     if(cduSeats + spdSeats > 315) {
       coalitions.push({id: "cduspd", seats: cduSeats + spdSeats, values: [{party: "CDU/CSU", value: cduSeats}, {party: "SPD", value: spdSeats}]});
+    // CDU + SPD + Grüne
+    } else if(cduSeats + spdSeats + grueneSeats > 315) {
+      coalitions.push({id: "cdugruenespd", seats: cduSeats + grueneSeats + spdSeats, values: [{party: "CDU/CSU", value: cduSeats},{party: "SPD", value: spdSeats}, {party: "Grüne", value: grueneSeats}]});
     }
+
+    // CDU + Grüne
     if(cduSeats + grueneSeats > 315) {
       coalitions.push({id: "cdugruene", seats: cduSeats + grueneSeats, values: [{party: "CDU/CSU", value: cduSeats}, {party: "Grüne", value: grueneSeats}]});
     }
-    if(cduSeats + spdSeats + grueneSeats > 315) {
-      coalitions.push({id: "cdugruenespd", seats: cduSeats + grueneSeats + spdSeats, values: [{party: "CDU/CSU", value: cduSeats},{party: "SPD", value: spdSeats}, {party: "Grüne", value: grueneSeats}]});
+
+    // CDU + AfD
+    if(cduSeats + afdSeats > 315) {
+      coalitions.push({id: "cduafd", seats: cduSeats + afdSeats, values: [{party: "CDU/CSU", value: cduSeats}, {party: "AfD", value: afdSeats}]});
+    // CDU + AfD + FDP
+    } else if(cduSeats + afdSeats + fdpSeats > 315) {
+      coalitions.push({id: "cduafdfdp", seats: cduSeats + afdSeats + fdpSeats, values: [{party: "CDU/CSU", value: cduSeats},{party: "AfD", value: afdSeats}, {party: "FDP", value: fdpSeats}]});
     }
 
     return coalitions;
