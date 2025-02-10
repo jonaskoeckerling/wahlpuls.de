@@ -1,4 +1,10 @@
-<div class="tile">
+<div class="tile" id="coalitionTile"
+[@coalitionListAnimation]="{
+    value: this.results.coalitions().length,
+    params: {
+        startHeight: getComputedHeight('#coalitionTile')
+    }
+}">
    <h2>Mögliche Koalitionen</h2>
     @for (coalition of this.results.coalitions(); track coalition.id) {
         <div class="coalition-item">
