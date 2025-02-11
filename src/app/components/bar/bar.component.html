@@ -1,4 +1,4 @@
-<div class="bar-item" [class.disabled]="isDisabled()" style="width: {{ barValue() * 100 }}%;">
+<div class="bar-item" [class.disabled]="isDisabled()" [style.width.%]="barValue() * 100">
     <div class="label">
         <h3 class="party">
             {{ name() }}
@@ -6,6 +6,6 @@
         <div class="value">{{ value() }} %</div>
     </div>
     <div class="bar">
-        <div class="bar-inner" style="background-color: {{ color() }};"></div>
+        <div class="bar-inner" [style.backgroundColor]="color()"></div>
     </div>
 </div>
