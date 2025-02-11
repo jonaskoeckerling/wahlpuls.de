@@ -1,10 +1,9 @@
 .bar-item {
     display: flex;
-    flex-direction: horizontal;
-    margin: 1.25em 0em 0em 0em;
-    align-items: center;
-    gap: 1em;
-    transition: opacity 0.5s ease-in-out;
+    flex-direction: column;
+    margin: 1.2em 0em 0em 0em;
+    gap: 0.1em;
+    transition: opacity 0.5s ease-in-out, width 0.5s ease-in-out;
 }
 
 .bar-item.disabled {
@@ -12,24 +11,27 @@
 }
 
 .label {
-    width: 4.5em;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: baseline;
+    gap: 0.5em;
+}
+
+.party {
     flex-shrink: 0;
-}
-
-.bar-outer {
-    height: var(--bar-height);
-    position: relative;
-    flex-grow: 1;
-}
-
-.bar-inner {
-    border-radius: 0 var(--border-radius-small) var(--border-radius-small) 0;
-    height: 100%;
-    transition: width 0.5s ease-in-out;
 }
 
 .value {
-    width: 2.9em;
-    font-weight: 300;
     flex-shrink: 0;
+}
+
+.bar {
+    width: 100%;
+    height: var(--bar-height);
+}
+
+.bar-inner {
+    border-radius: 0.25em var(--border-radius-small) var(--border-radius-small) 0.25em;
+    height: 100%;
 }

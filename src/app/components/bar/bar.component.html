@@ -1,9 +1,11 @@
-<div class="bar-item" [class.disabled]="isDisabled()">
-    <h3 class="label">
-        {{ name() }}
-    </h3>
-    <div class="bar-outer">
-        <div class="bar-inner" style="background-color: {{ color() }}; width: {{ barValue() * 100 }}%;"></div>
+<div class="bar-item" [class.disabled]="isDisabled()" style="width: {{ barValue() * 100 }}%;">
+    <div class="label">
+        <h3 class="party">
+            {{ name() }}
+        </h3>
+        <div class="value">{{ value() }} %</div>
     </div>
-    <div class="value">{{ value() }} %</div>
+    <div class="bar">
+        <div class="bar-inner" style="background-color: {{ color() }};"></div>
+    </div>
 </div>
