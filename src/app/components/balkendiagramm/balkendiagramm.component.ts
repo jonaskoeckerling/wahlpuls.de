@@ -1,4 +1,4 @@
-import { Component, effect, inject, signal } from '@angular/core';
+import { Component, computed, inject } from '@angular/core';
 import { ResultsService } from '../../services/results.service';
 import { BarComponent } from '../bar/bar.component';
 
@@ -13,20 +13,18 @@ export class BalkendiagrammComponent {
   selectedQuelle = this.results.selectedPollResult;
 
   // Get max value for rendering full width chart
-  maxValue = signal<number>(0);
-
-  constructor() {
-    effect(() => {
-      this.maxValue.set(Math.max(...[
-        this.selectedQuelle().cducsu,
-        this.selectedQuelle().spd,
-        this.selectedQuelle().afd,
-        this.selectedQuelle().bsw,
-        this.selectedQuelle().linke,
-        this.selectedQuelle().sonstige,
-        this.selectedQuelle().fdp,
-        this.selectedQuelle().gruene,
-      ]));
-    });
-  }
+  maxValue = computed(() => {
+    const allValues = new Array<number>();
+    for(const result of this.results.allPollResults()) {
+      allValues.push(result.cducsu);
+      allValues.push(result.spd);
+      allValues.push(result.gruene);
+      allValues.push(result.fdp);
+      allValues.push(result.afd);
+      allValues.push(result.bsw);
+      allValues.push(result.linke);
+      allValues.push(result.sonstige);
+    }
+    return Math.max(...allValues);
+  });
 } 
