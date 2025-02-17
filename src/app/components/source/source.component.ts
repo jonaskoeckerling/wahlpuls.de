@@ -1,7 +1,7 @@
 import { Component, inject, input } from '@angular/core';
 import { ResultsService } from '../../services/results.service';
 import { DatePipe } from '@angular/common';
-import { pollResult } from '../../models/pollresult.model';
+import { Source } from '../../models/source.model';
 
 @Component({
   selector: 'app-source',
@@ -10,13 +10,13 @@ import { pollResult } from '../../models/pollresult.model';
   styleUrl: './source.component.scss'
 })
 export class SourceComponent {
-  pollResult = input.required<pollResult>();
+  source = input.required<Source>();
   selected = input.required<Boolean>();
+  resultsService = inject(ResultsService);
 
-  results = inject(ResultsService);
   handleClick(): void {
     // Set selected source
-    this.results.setSelectedPollResult(this.pollResult().id);
+    this.resultsService.setSelectedSource(this.source());
 
     // Scroll bar chart into view for mobile
     const barchart = document.getElementById("barchart");

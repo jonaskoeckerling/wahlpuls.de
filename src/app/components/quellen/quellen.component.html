@@ -1,8 +1,8 @@
 <div class="tile">
     <h2>Quelle</h2>
     <div class="source-flexbox">
-        @for (pollResult of results.allPollResults(); track pollResult.id) {
-            <app-source [pollResult]="pollResult" [selected]="pollResult === results.selectedPollResult()" />
+        @for (source of this.resultsService.allSources(); track source.name) {
+            <app-source [source]="source" [selected]="source === resultsService.selectedSource()" />
         }
     </div>  
 </div>

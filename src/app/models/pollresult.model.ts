@@ -1,6 +1,4 @@
-export interface pollResult {
-    id: number;
-    source: string;
+export interface PollResult {
     date: Date;
     cducsu: number;
     spd: number;

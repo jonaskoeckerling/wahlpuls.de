@@ -9,21 +9,20 @@ import { BarComponent } from '../bar/bar.component';
   styleUrl: './balkendiagramm.component.scss'
 })
 export class BalkendiagrammComponent {
-  results = inject(ResultsService);
-  selectedQuelle = this.results.selectedPollResult;
+  resultsService = inject(ResultsService);
 
   // Get max value for rendering full width chart
   maxValue = computed(() => {
     const allValues = new Array<number>();
-    for(const result of this.results.allPollResults()) {
-      allValues.push(result.cducsu);
-      allValues.push(result.spd);
-      allValues.push(result.gruene);
-      allValues.push(result.fdp);
-      allValues.push(result.afd);
-      allValues.push(result.bsw);
-      allValues.push(result.linke);
-      allValues.push(result.sonstige);
+    for(const source of this.resultsService.allSources()) {
+      allValues.push(source.pollResults[0].cducsu);
+      allValues.push(source.pollResults[0].spd);
+      allValues.push(source.pollResults[0].gruene);
+      allValues.push(source.pollResults[0].fdp);
+      allValues.push(source.pollResults[0].afd);
+      allValues.push(source.pollResults[0].bsw);
+      allValues.push(source.pollResults[0].linke);
+      allValues.push(source.pollResults[0].sonstige);
     }
     return Math.max(...allValues);
   });

@@ -9,5 +9,5 @@ import { SourceComponent } from '../source/source.component';
   styleUrl: './quellen.component.scss'
 })
 export class QuellenComponent {
-  results = inject(ResultsService);
+  resultsService = inject(ResultsService);
 }

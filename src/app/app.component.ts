@@ -5,10 +5,11 @@ import { CoalitionListComponent } from "./components/coalition-list/coalition-li
 import { CountdownComponent } from "./components/countdown/countdown.component";
 import { ResultsService } from './services/results.service';
 import { fadeAnimation } from './animations/fade';
+import { LinechartComponent } from "./components/linechart/linechart.component";
 
 @Component({
   selector: 'app-root',
-  imports: [BalkendiagrammComponent, QuellenComponent, CoalitionListComponent, CountdownComponent],
+  imports: [BalkendiagrammComponent, QuellenComponent, CoalitionListComponent, CountdownComponent, LinechartComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   animations: [fadeAnimation]
