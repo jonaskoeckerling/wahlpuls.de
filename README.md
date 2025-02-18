@@ -2,6 +2,8 @@
 
 The website Wahlpuls.de offers a simple and comprehensive dashboard to keep track of the latest poll results for the geman political system. You can compare poll results from different research institutes and analyze trends over time. The website is designed to be user-friendly and accessible, making it easy for anyone interested in the political landscape to stay informed about the latest poll results.
 
+**🚀 Check out the live website here: https://wahlpuls.de/**
+
 ## Features
 
 - 📊 **Bar Chart:** Check poll results with a simple bar chart.
