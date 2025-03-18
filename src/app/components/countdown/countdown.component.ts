@@ -7,11 +7,17 @@ import { Component } from '@angular/core';
   styleUrl: './countdown.component.scss'
 })
 export class CountdownComponent {
-  getDays(): number {
+  getCountdownText(): String {
     let today = new Date();
-    let voteday = new Date("2025-02-23");
+    let voteday = new Date("2029-02-23");
     let difference_in_time = voteday.getTime() - today.getTime();
     let difference_in_days = Math.round(difference_in_time / (1000 * 3600 * 24));
-    return difference_in_days;
+    if (difference_in_days > 30) {
+      if (difference_in_days > 365) {
+        return Math.round(difference_in_days / 365) + " Jahre";
+      }
+      return Math.round(difference_in_days / 30) + " Monate";
+    }
+    return Math.round(difference_in_days) + " Tage";
   }
 }
