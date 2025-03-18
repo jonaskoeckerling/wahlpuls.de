@@ -1,40 +1,24 @@
 @if (this.results.isDataAvailable()) {
 <div [@fadeAnimation]>
-  <div class="section header">
-    <div class="container">
-      <h1>Bundestageswahl 2025</h1>
-      <p>Aktuelle Umfragewerte der Parteien aus verschiedenen Wahlumfragen.</p>
-    </div>
-  </div>
-  <div class="section">
-    <div class="container">
-      <div class="grid">
-        <div class="grid-column">
-          <app-balkendiagramm />
-          <app-coalition-list />
-          <app-linechart />
-        </div>
-        <div class="grid-column">
-          <app-quellen />
-          <app-countdown />
-        </div>
-      </div>
-    </div>
-  </div>
+  <router-outlet></router-outlet>
   <div class="section footer">
     <div class="container">
       <h1>Wahlpuls.de</h1>
       <div class="grid">
         <div class="grid-column">
-          <p>In diesem Dashboard findest Du aktuelle Wahlumfragen zur Bundestagswahl 2029. Mit den regelmäßig
+          <p>
+            In diesem Dashboard findest Du aktuelle Wahlumfragen zur Bundestagswahl 2029. Mit den regelmäßig
             veröffentlichten Daten von renommierten Umfrageinstituten bekommst Du einen kompakten Überblick über die
-            Umfragewerte der deutschen Parteien im Bundestag.</p>
-          <p>Dazu durchsucht Wahlpuls.de automatisiert verschiedene Online-Quellen und zeigt Dir die Ergebnisse in
+            Umfragewerte der deutschen Parteien im Bundestag.
+          </p>
+          <p>
+            Dazu durchsucht Wahlpuls.de automatisiert verschiedene Online-Quellen und zeigt Dir die Ergebnisse in
             übersichtlichen Diagrammen an. Die Seite ist ein reines Hobby-Projekt zur kostenlosen und werbefreien
             Nutzung. Anregungen und Feedback nehme ich gerne unter <a
-              href="mailto:hallo@wahlpuls.de">hallo&#64;wahlpuls.de</a> entgegen.</p>
+              href="mailto:hallo@wahlpuls.de">hallo&#64;wahlpuls.de</a> entgegen.
+          </p>
           <div>
-            <a href="#">Impressum</a> | <a href="#">Datenschutz</a>
+            <a href="#">Impressum</a> | <a href="#">Datenschutz</a>
           </div>
         </div>
         <div class="footer-copyright">
