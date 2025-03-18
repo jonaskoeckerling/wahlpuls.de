@@ -26,6 +26,12 @@ export class LinechartComponent implements OnInit {
           backgroundColor: this.resultsService.getPartyColor("CDU/CSU"),
         },
         {
+          label: 'AfD',
+          data: this.resultsService.selectedSource().pollResults.map(pollResult => pollResult.afd),
+          borderColor: this.resultsService.getPartyColor("AfD"),
+          backgroundColor: this.resultsService.getPartyColor("AfD"),
+        },
+        {
           label: 'SPD',
           data: this.resultsService.selectedSource().pollResults.map(pollResult => pollResult.spd),
           borderColor: this.resultsService.getPartyColor("SPD"),
@@ -38,18 +44,6 @@ export class LinechartComponent implements OnInit {
           backgroundColor: this.resultsService.getPartyColor("Grüne"),
         },
         {
-          label: 'FDP',
-          data: this.resultsService.selectedSource().pollResults.map(pollResult => pollResult.fdp),
-          borderColor: this.resultsService.getPartyColor("FDP"),
-          backgroundColor: this.resultsService.getPartyColor("FDP"),
-        },
-        {
-          label: 'AfD',
-          data: this.resultsService.selectedSource().pollResults.map(pollResult => pollResult.afd),
-          borderColor: this.resultsService.getPartyColor("AfD"),
-          backgroundColor: this.resultsService.getPartyColor("AfD"),
-        },
-        {
           label: 'Linke',
           data: this.resultsService.selectedSource().pollResults.map(pollResult => pollResult.linke),
           borderColor: this.resultsService.getPartyColor("Linke"),
@@ -60,6 +54,12 @@ export class LinechartComponent implements OnInit {
           data: this.resultsService.selectedSource().pollResults.map(pollResult => pollResult.bsw),
           borderColor: this.resultsService.getPartyColor("BSW"),
           backgroundColor: this.resultsService.getPartyColor("BSW"),
+        },
+        {
+          label: 'FDP',
+          data: this.resultsService.selectedSource().pollResults.map(pollResult => pollResult.fdp),
+          borderColor: this.resultsService.getPartyColor("FDP"),
+          backgroundColor: this.resultsService.getPartyColor("FDP"),
         },
         {
           label: 'Sonstige',

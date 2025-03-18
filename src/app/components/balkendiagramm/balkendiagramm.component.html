@@ -1,35 +1,19 @@
 <div class="tile" id="barchart">
     <h2>Umfragewerte</h2>
-    <app-bar name="CDU/CSU"
-        [value]="resultsService.selectedSource().pollResults[0].cducsu"
-        [barValue]="resultsService.selectedSource().pollResults[0].cducsu / maxValue()"
-        color="#121212"></app-bar>
-    <app-bar name="SPD"
-        [value]="resultsService.selectedSource().pollResults[0].spd"
-        [barValue]="resultsService.selectedSource().pollResults[0].spd / maxValue()"
-        color="#e3000f"></app-bar>
-    <app-bar name="Grüne"
-        [value]="resultsService.selectedSource().pollResults[0].gruene"
-        [barValue]="resultsService.selectedSource().pollResults[0].gruene / maxValue()"
-        color="#005437"></app-bar>
-    <app-bar name="FDP"
-        [value]="resultsService.selectedSource().pollResults[0].fdp"
-        [barValue]="resultsService.selectedSource().pollResults[0].fdp / maxValue()"
-        color="#ffe209"></app-bar>
-    <app-bar name="AfD"
-        [value]="resultsService.selectedSource().pollResults[0].afd"
-        [barValue]="resultsService.selectedSource().pollResults[0].afd / maxValue()"
-        color="#009ee0"></app-bar>
-    <app-bar name="Linke"
-        [value]="resultsService.selectedSource().pollResults[0].linke"
-        [barValue]="resultsService.selectedSource().pollResults[0].linke / maxValue()"
-        color="#F00"></app-bar>
-    <app-bar name="BSW"
-        [value]="resultsService.selectedSource().pollResults[0].bsw"
-        [barValue]="resultsService.selectedSource().pollResults[0].bsw / maxValue()"
-        color="#8112B4"></app-bar>
-    <app-bar name="Sonstige"
-        [value]="resultsService.selectedSource().pollResults[0].sonstige"
-        [barValue]="resultsService.selectedSource().pollResults[0].sonstige / maxValue()"
-        color="#E8E8E8"></app-bar>
+    <app-bar name="CDU/CSU" [value]="resultsService.selectedSource().pollResults[0].cducsu"
+        [barValue]="resultsService.selectedSource().pollResults[0].cducsu / maxValue()" color="#121212"></app-bar>
+    <app-bar name="AfD" [value]="resultsService.selectedSource().pollResults[0].afd"
+        [barValue]="resultsService.selectedSource().pollResults[0].afd / maxValue()" color="#009ee0"></app-bar>
+    <app-bar name="SPD" [value]="resultsService.selectedSource().pollResults[0].spd"
+        [barValue]="resultsService.selectedSource().pollResults[0].spd / maxValue()" color="#e3000f"></app-bar>
+    <app-bar name="Grüne" [value]="resultsService.selectedSource().pollResults[0].gruene"
+        [barValue]="resultsService.selectedSource().pollResults[0].gruene / maxValue()" color="#005437"></app-bar>
+    <app-bar name="Linke" [value]="resultsService.selectedSource().pollResults[0].linke"
+        [barValue]="resultsService.selectedSource().pollResults[0].linke / maxValue()" color="#F00"></app-bar>
+    <app-bar name="BSW" [value]="resultsService.selectedSource().pollResults[0].bsw"
+        [barValue]="resultsService.selectedSource().pollResults[0].bsw / maxValue()" color="#8112B4"></app-bar>
+    <app-bar name="FDP" [value]="resultsService.selectedSource().pollResults[0].fdp"
+        [barValue]="resultsService.selectedSource().pollResults[0].fdp / maxValue()" color="#ffe209"></app-bar>
+    <app-bar name="Sonstige" [value]="resultsService.selectedSource().pollResults[0].sonstige"
+        [barValue]="resultsService.selectedSource().pollResults[0].sonstige / maxValue()" color="#E8E8E8"></app-bar>
 </div>
