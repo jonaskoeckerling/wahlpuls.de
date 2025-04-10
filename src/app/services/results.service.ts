@@ -55,12 +55,12 @@ export class ResultsService {
     let coalitions: Array<Coalition> = new Array();
 
     // Nur CDU
-    if (cduSeats > 315) {
+    if (cduSeats > 316) {
       coalitions.push({ id: "cdu", seats: cduSeats, values: [{ party: "CDU/CSU", value: cduSeats }] });
     }
 
     // CDU + SPD
-    if (cduSeats + spdSeats > 315) {
+    if (cduSeats + spdSeats > 316) {
       coalitions.push({ id: "cduspd", seats: cduSeats + spdSeats, values: [{ party: "CDU/CSU", value: cduSeats }, { party: "SPD", value: spdSeats }] });
       // CDU + SPD + Grüne
     } else if (cduSeats + spdSeats + grueneSeats > 315) {
@@ -68,16 +68,24 @@ export class ResultsService {
     }
 
     // CDU + Grüne
-    if (cduSeats + grueneSeats > 315) {
+    if (cduSeats + grueneSeats > 316) {
       coalitions.push({ id: "cdugruene", seats: cduSeats + grueneSeats, values: [{ party: "CDU/CSU", value: cduSeats }, { party: "Grüne", value: grueneSeats }] });
     }
 
     // CDU + AfD
-    if (cduSeats + afdSeats > 315) {
+    if (cduSeats + afdSeats > 316) {
       coalitions.push({ id: "cduafd", seats: cduSeats + afdSeats, values: [{ party: "CDU/CSU", value: cduSeats }, { party: "AfD", value: afdSeats }] });
       // CDU + AfD + FDP
-    } else if (cduSeats + afdSeats + fdpSeats > 315) {
+    } else if (cduSeats + afdSeats + fdpSeats > 316) {
       coalitions.push({ id: "cduafdfdp", seats: cduSeats + afdSeats + fdpSeats, values: [{ party: "CDU/CSU", value: cduSeats }, { party: "AfD", value: afdSeats }, { party: "FDP", value: fdpSeats }] });
+    }
+
+    // SPD + Grüne
+    if (spdSeats + grueneSeats > 316) {
+      coalitions.push({ id: "spdgruene", seats: spdSeats + grueneSeats, values: [{ party: "SPD", value: spdSeats }, { party: "Grüne", value: grueneSeats }] });
+      // SPD + Grüne + Linke
+    } else if (spdSeats + grueneSeats + linkeSeats > 316) {
+      coalitions.push({ id: "spdgruenelinke", seats: spdSeats + grueneSeats + linkeSeats, values: [{ party: "SPD", value: spdSeats }, { party: "Grüne", value: grueneSeats }, { party: "Linke", value: linkeSeats }] });
     }
 
     return coalitions;
