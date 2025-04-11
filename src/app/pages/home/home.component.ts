@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { ResultsService } from '../../services/results.service';
+import { ActivatedRoute } from '@angular/router';
 import { BalkendiagrammComponent } from "../../components/balkendiagramm/balkendiagramm.component";
 import { CoalitionListComponent } from "../../components/coalition-list/coalition-list.component";
 import { LinechartComponent } from "../../components/linechart/linechart.component";
@@ -14,4 +15,12 @@ import { CountdownComponent } from "../../components/countdown/countdown.compone
 })
 export class HomeComponent {
     results = inject(ResultsService);
+    private readonly route = inject(ActivatedRoute);
+    electionId: string | null = null;
+
+    ngOnInit() {
+        this.route.paramMap.subscribe(params => {
+            this.electionId = params.get('id');
+        });
+    }
 }
